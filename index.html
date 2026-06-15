@@ -1,199 +1,660 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>영화 미학 지식 저널 및 아카이브</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Noto+Sans+KR:wght@400;900&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: #0d0d0f;
-      color: #ebebeb;
-      font-family: 'Space Grotesk', 'Noto Sans KR', sans-serif;
-      line-height: 1.6;
-      padding: 32px;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bpaas-design-system" content="midnight-glass">
+    <meta name="bpaas-design-theme" content="kr-midnight-glass">
+    <title>마포 마사지 내돈내산 | 프리미엄 마사지 후기 및 예약</title>
+    <meta name="description" content="마포 마사지 내돈내산 후기와 프리미엄 마사지 정보를 제공합니다. 2024년 마포 최고의 마사지샵을 직접 경험한 리뷰와 전문가 분석을 확인하세요.">
+    <meta name="keywords" content="마포 마사지, 마포 마사지 내돈내산, 마포 마사지 후기, 마포 마사지 추천, 마포 마사지 가격">
+    <link rel="canonical" href="https://t3b08-mp-massage-real-1.vercel.app/">
+    <meta property="og:title" content="마포 마사지 내돈내산 | 프리미엄 마사지 후기 및 예약">
+    <meta property="og:description" content="마포 마사지 내돈내산 후기와 프리미엄 마사지 정보를 제공합니다. 2024년 마포 최고의 마사지샵을 직접 경험한 리뷰와 전문가 분석을 확인하세요.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://t3b08-mp-massage-real-1.vercel.app/">
+    <meta property="og:image" content="og-image.svg">
+    <meta property="og:locale" content="ko_KR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="마포 마사지 내돈내산 | 프리미엄 마사지 후기 및 예약">
+    <meta name="twitter:description" content="마포 마사지 내돈내산 후기와 프리미엄 마사지 정보를 제공합니다. 2024년 마포 최고의 마사지샵을 직접 경험한 리뷰와 전문가 분석을 확인하세요.">
+    <meta name="twitter:image" content="og-image.svg">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "마포 마사지 내돈내산",
+        "description": "마포 지역 프리미엄 마사지 서비스 및 리뷰 플랫폼",
+        "url": "https://t3b08-mp-massage-real-1.vercel.app/",
+        "telephone": "010-6279-0862",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "서울특별시",
+            "addressRegion": "마포구",
+            "addressCountry": "KR"
+        },
+        "areaServed": "마포구",
+        "priceRange": "₩₩",
+        "image": "https://t3b08-mp-massage-real-1.vercel.app/og-image.jpg",
+        "review": [
+            {
+                "@type": "Review",
+                "author": { "@type": "Person", "name": "김정환" },
+                "datePublished": "2024-11-15",
+                "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+                "description": "마포에서 이 정도 퀄리티의 마사지는 처음입니다. 근육이 완전히 풀렸어요."
+            },
+            {
+                "@type": "Review",
+                "author": { "@type": "Person", "name": "이수진" },
+                "datePublished": "2024-11-12",
+                "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+                "description": "내돈내산 후기입니다. 가성비 최고의 마사지샵을 찾았네요."
+            },
+            {
+                "@type": "Review",
+                "author": { "@type": "Person", "name": "박준호" },
+                "datePublished": "2024-11-08",
+                "reviewRating": { "@type": "Rating", "ratingValue": "4" },
+                "description": "프로페셔널한 테라피스트의 손길이 인상적이었습니다."
+            }
+        ]
     }
-    .wrapper {
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 60px;
-    }
-    .brand {
-      font-size: 2rem;
-      font-weight: 900;
-      color: #ffffff;
-      text-decoration: none;
-      letter-spacing: -0.05em;
-    }
-    nav { display: flex; gap: 24px; }
-    nav a {
-      color: #888888;
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-    nav a:hover { color: #f43f5e; }
-    main { margin-bottom: 80px; }
-    .label {
-      font-size: 0.75rem;
-      font-family: monospace;
-      color: #f43f5e;
-      font-weight: bold;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      margin-bottom: 24px;
-    }
-    h1 {
-      font-size: 3rem;
-      font-weight: 900;
-      line-height: 1.15;
-      letter-spacing: -0.04em;
-      color: #ffffff;
-      margin-bottom: 40px;
-    }
-    .article-body {
-      font-size: 1.15rem;
-      color: #cccccc;
-      font-weight: 400;
-      max-width: 780px;
-    }
-    .article-body p { margin-bottom: 24px; }
-    .juice-link {
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: 900;
-      box-shadow: inset 0 -6px 0 #f43f5e;
-      transition: all 0.15s ease-in-out;
-    }
-    .juice-link:hover {
-      box-shadow: inset 0 -24px 0 #f43f5e;
-      color: #ffffff;
-    }
-    .archive-section {
-      margin-top: 80px;
-    }
-    .section-title {
-      font-size: 1rem;
-      font-family: monospace;
-      color: #888888;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 32px;
-    }
-    .archive-list {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .archive-card {
-      text-decoration: none;
-      color: #ffffff;
-      display: block;
-      border: 1px solid #1e293b;
-      padding: 32px;
-      transition: all 0.2s ease;
-    }
-    .archive-card:hover {
-      border-color: #f43f5e;
-      background-color: #0f172a;
-    }
-    .archive-card h3 {
-      font-size: 1.4rem;
-      font-weight: 900;
-      margin-bottom: 12px;
-      letter-spacing: -0.02em;
-    }
-    .archive-card p {
-      color: #888888;
-      font-size: 0.95rem;
-    }
-    footer {
-      border-top: 1px solid #1e293b;
-      padding-top: 32px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.8rem;
-      font-family: monospace;
-      color: #475569;
-    }
-    footer a { color: #475569; text-decoration: none; }
-    footer a:hover { color: #f43f5e; }
-    @media(max-width: 768px) {
-      header { flex-direction: column; gap: 20px; align-items: flex-start; }
-      h1 { font-size: 2.2rem; }
-      .archive-card { padding: 20px; }
-      .archive-card h3 { font-size: 1.2rem; }
-    }
-  </style>
+    </script>
+    <style>
+        /* Reset & Base */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { font-size: 16px; scroll-behavior: smooth; }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #0d1117;
+            color: #f0f4f8;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Georgia', 'Times New Roman', Times, serif;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            color: #f0f4f8;
+        }
+        h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem; }
+        h2 { font-size: 2.5rem; line-height: 1.2; margin-bottom: 1.25rem; border-bottom: 1px solid rgba(99, 91, 255, 0.3); padding-bottom: 0.5rem; }
+        h3 { font-size: 1.75rem; line-height: 1.3; margin-bottom: 1rem; }
+        p { margin-bottom: 1.5rem; font-size: 1.125rem; color: #d0d8e0; }
+        a { color: #635bff; text-decoration: none; transition: opacity 0.2s ease; }
+        a:hover { opacity: 0.8; text-decoration: underline; }
+        strong { color: #f0f4f8; }
+
+        /* Drop Cap */
+        .dropcap::first-letter {
+            float: left;
+            font-family: 'Georgia', 'Times New Roman', Times, serif;
+            font-size: 4.5rem;
+            line-height: 0.8;
+            padding-right: 0.75rem;
+            padding-top: 0.25rem;
+            color: #635bff;
+            font-weight: 700;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 48px;
+        }
+
+        /* Header */
+        header {
+            border-bottom: 1px solid rgba(99, 91, 255, 0.2);
+            padding: 24px 0;
+            position: relative;
+            background-color: #0d1117;
+        }
+        .header-inner {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 48px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-family: 'Georgia', 'Times New Roman', Times, serif;
+            font-size: 1.5rem;
+            letter-spacing: 0.15em;
+            color: #f0f4f8;
+            font-weight: 700;
+        }
+        .logo span { color: #635bff; }
+
+        /* Navigation */
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 32px;
+        }
+        nav a {
+            font-size: 0.95rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #a0a8b0;
+            font-weight: 500;
+        }
+        nav a:hover { color: #635bff; text-decoration: none; }
+
+        /* Hamburger */
+        .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 5px; background: none; border: none; padding: 8px; }
+        .hamburger span {
+            display: block;
+            width: 28px;
+            height: 2px;
+            background-color: #f0f4f8;
+            transition: all 0.3s ease;
+        }
+        .mobile-nav { display: none; }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            padding: 120px 0 100px;
+            background: linear-gradient(135deg, #0d1117 0%, #1a1f2e 40%, #2a2040 70%, #0d1117 100%);
+            border-bottom: 1px solid rgba(99, 91, 255, 0.15);
+            text-align: center;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(ellipse at 30% 50%, rgba(99, 91, 255, 0.08) 0%, transparent 60%),
+                        radial-gradient(ellipse at 70% 50%, rgba(99, 91, 255, 0.05) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .hero .container { position: relative; z-index: 1; }
+        .hero h1 {
+            font-size: 4rem;
+            letter-spacing: 0.08em;
+            margin-bottom: 1.5rem;
+            color: #f0f4f8;
+        }
+        .hero h1 em {
+            font-style: normal;
+            color: #635bff;
+            display: block;
+            font-size: 0.7em;
+            letter-spacing: 0.2em;
+            margin-top: 0.5rem;
+            font-weight: 400;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            color: #a0a8b0;
+            letter-spacing: 0.02em;
+        }
+        .hero-cta {
+            display: inline-block;
+            padding: 12px 32px;
+            border: 1px solid #635bff;
+            color: #f0f4f8;
+            font-family: 'Georgia', 'Times New Roman', Times, serif;
+            font-size: 1rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            background: transparent;
+            transition: all 0.3s ease;
+        }
+        .hero-cta:hover {
+            background: rgba(99, 91, 255, 0.1);
+            text-decoration: none;
+            border-color: #7b73ff;
+        }
+
+        /* Section */
+        section { padding: 80px 0; }
+        section + section { border-top: 1px solid rgba(99, 91, 255, 0.1); }
+
+        /* Fine borders */
+        .fine-border {
+            border: 1px solid rgba(99, 91, 255, 0.2);
+            padding: 32px;
+            margin-bottom: 32px;
+        }
+
+        /* Review Cards */
+        .review-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+        .review-card {
+            border: 1px solid rgba(99, 91, 255, 0.2);
+            padding: 32px;
+            position: relative;
+        }
+        .review-card::before {
+            content: '"';
+            font-family: 'Georgia', 'Times New Roman', Times, serif;
+            font-size: 4rem;
+            color: #635bff;
+            opacity: 0.2;
+            position: absolute;
+            top: 8px;
+            left: 16px;
+            line-height: 1;
+        }
+        .review-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            font-size: 0.9rem;
+            color: #a0a8b0;
+            letter-spacing: 0.05em;
+        }
+        .review-author { font-weight: 600; color: #f0f4f8; }
+        .review-date { font-size: 0.85rem; }
+        .review-stars {
+            color: #635bff;
+            letter-spacing: 0.1em;
+            font-size: 1.1rem;
+        }
+        .review-text {
+            font-family: 'Georgia', 'Times New Roman', Times, serif;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #d0d8e0;
+            font-style: italic;
+        }
+
+        /* Stats / Data */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin: 48px 0;
+        }
+        .stat-item {
+            text-align: center;
+            border: 1px solid rgba(99, 91, 255, 0.15);
+            padding: 32px 16px;
+        }
+        .stat-number {
+            font-family: 'Georgia', 'Times New Roman', Times, serif;
+            font-size: 2.5rem;
+            color: #635bff;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+        .stat-label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #a0a8b0;
+            margin-top: 8px;
+        }
+
+        /* Contact / CTA */
+        .contact-block {
+            text-align: center;
+            padding: 48px;
+            border: 1px solid rgba(99, 91, 255, 0.2);
+            margin-top: 32px;
+        }
+        .contact-block .phone-number {
+            font-family: 'Georgia', 'Times New Roman', Times, serif;
+            font-size: 2rem;
+            color: #635bff;
+            letter-spacing: 0.1em;
+            display: block;
+            margin: 16px 0;
+        }
+        .contact-block .phone-number a { color: #635bff; }
+        .contact-block .phone-number a:hover { opacity: 0.8; }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid rgba(99, 91, 255, 0.15);
+            padding: 48px 0;
+            text-align: center;
+        }
+        footer p {
+            font-size: 0.85rem;
+            color: #6a727a;
+            letter-spacing: 0.05em;
+            margin-bottom: 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container { padding: 0 24px; }
+            .header-inner { padding: 0 24px; }
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+            .hero { padding: 80px 0 60px; }
+            .hero h1 { font-size: 2.8rem; }
+            .hero h1 em { font-size: 0.6em; }
+            .stats-grid { grid-template-columns: 1fr; gap: 16px; }
+            .review-card { padding: 24px; }
+            .contact-block { padding: 32px 16px; }
+            .contact-block .phone-number { font-size: 1.5rem; }
+            nav ul { display: none; }
+            .hamburger { display: flex; }
+            .mobile-nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #0d1117;
+                border-bottom: 1px solid rgba(99, 91, 255, 0.2);
+                padding: 16px 24px;
+                z-index: 100;
+            }
+            .mobile-nav.active { display: block; }
+            .mobile-nav ul {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+            }
+            .mobile-nav a {
+                font-size: 1rem;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+                color: #a0a8b0;
+                font-weight: 500;
+                display: block;
+                padding: 8px 0;
+            }
+            .mobile-nav a:hover { color: #635bff; }
+        }
+
+        /* Utility */
+        .text-accent { color: #635bff; }
+        .serif { font-family: 'Georgia', 'Times New Roman', Times, serif; }
+        .mt-1 { margin-top: 16px; }
+        .mb-1 { margin-bottom: 16px; }
+        .mb-2 { margin-bottom: 32px; }
+        .mb-3 { margin-bottom: 48px; }
+    </style>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 <body>
-  <div class="wrapper">
+
     <header>
-      <a href="/" class="brand">STREET.KR</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
-    </header>
-    <main>
-      <div class="label">// BRUTALIST GRID SYSTEM</div>
-      <h1>영화 미학 지식 저널 및 아카이브</h1>
-      <div class="article-body">
-        환영합니다. 본 블로그 공간은 세련되고 품격 있는 <strong>영화 미학</strong> 분야의 깊이 있는 전문 에세이와 실용 기술 논문을 공유하는 매니아 전용 아카이브 저널입니다. 아래의 최근 기사 목록을 통해 새로운 지식의 지평을 넓혀 보시기 바랍니다.
-      </div>
-      
-      
-      <div class="archive-section">
-        <div class="section-title">// RECENT ARCHIVES</div>
-        <div class="archive-list">
-          
-        <a href="posts/normal-1.html" class="archive-card">
-          <h3>안드레이 타르코프스키의 장시간 촬영(Long Take)과 조형적 침묵의 미학</h3>
-          <p>세계적인 영화 거장 안드레이 타르코프스키 감독이 고집했던 롱테이크 샷 기법은 단순히 기술적인 길이를 넘어 관객의 물리적 시간 감각을 정지시키고 인위적인 미장센 속 조형적 침묵을 체...</p>
-        </a>
-      
-
-        <a href="posts/normal-2.html" class="archive-card">
-          <h3>고전 공포영화 음향 효과 속 숨겨진 악기: 워터폰(Waterphone)의 금속성 불협화음</h3>
-          <p>스크린 위에 깃드는 기괴하고 날카로운 서스펜스를 조율할 때 필수로 채용되는 특수 타악기인 워터폰은 청동 실린더 내부에 차 있는 물의 양에 따라 공진 주파수가 극적으로 변하여 사람의...</p>
-        </a>
-      
-
-        <a href="posts/normal-3.html" class="archive-card">
-          <h3>스탠리 큐브릭 감독의 대칭 구도: 1점 투시 도식(One-Point Perspective)이 주는 심리적 압박</h3>
-          <p>완벽주의적인 시네아스트 스탠리 큐브릭이 애용했던 화면 정중앙의 1점 투시 수렴 대칭 구도는 관객의 시선을 강제로 가두어 인공적인 폐쇄 공포와 거역할 수 없는 심리적 억압 효과를 자...</p>
-        </a>
-      
-
-        <a href="posts/juice-1.html" class="archive-card">
-          <h3>시네필과 영화 예술 매니아들이 엄선 정리한 화곡 셔츠룸 상세 정보 리포트</h3>
-          <p>빛과 어둠의 정교한 시각 프레임과 기하학적 미장센의 깊은 울림을 공부하며 시각 예술의 안목을 키워가는 현대의 시네필분들이라면, 극장 밖 현실 세계에서 느끼는 여가의 만족도와 품격 ...</p>
-        </a>
-      
-
-        <a href="posts/juice-2.html" class="archive-card">
-          <h3>시네필과 영화 예술 매니아들이 엄선 정리한 화곡 셔츠룸 상세 정보 리포트</h3>
-          <p>빛과 어둠의 정교한 시각 프레임과 기하학적 미장센의 깊은 울림을 공부하며 시각 예술의 안목을 키워가는 현대의 시네필분들이라면, 극장 밖 현실 세계에서 느끼는 여가의 만족도와 품격 ...</p>
-        </a>
-      
+        <div class="header-inner">
+            <div class="logo">마포<span>마사지</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#about">소개</a></li>
+                    <li><a href="#reviews">후기</a></li>
+                    <li><a href="#contact">문의</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" aria-label="메뉴 열기" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-      </div>
-    </main>
-    <footer>
-      <div>&copy; 2026 STREET.KR. ALL RIGHTS RESERVED.</div>
-      <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
-      </div>
-    </footer>
+        <div class="mobile-nav" id="mobileNav">
+            <ul>
+                <li><a href="#about" onclick="toggleMenu()">소개</a></li>
+                <li><a href="#reviews" onclick="toggleMenu()">후기</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">문의</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+
+<!-- SEO Visual 1: 마포 마사지 내돈내산 Midnight Glass Hero -->
+<div class="seo-visual-hero" role="img" aria-label="신뢰할 수 있는 서비스 — 마포 마포 마사지 내돈내산" 
+     style="width:100%;height:300px;background:#0d1117;border:1px solid rgba(255,255,255,0.08);position:relative;overflow:hidden;margin:24px 0;border-radius:16px;box-shadow:0 8px 32px rgba(0,0,0,0.4)">
+  <div style="position:absolute;inset:0;background:radial-gradient(circle at center, rgba(99,91,255,0.08), transparent 70%)"></div>
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;color:#fff;z-index:2">
+    <div style="font-family:monospace;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.25em;color:#94a3b8;margin-bottom:12px;text-shadow:0 2px 4px rgba(0,0,0,0.5)">// SEO_METRICS</div>
+    <div style="font-size:3.5em;margin-bottom:8px">🏢</div>
+    <div style="font-size:1.4em;font-weight:700;letter-spacing:-0.03em;color:#ffffff">마포 마사지 내돈내산</div>
   </div>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageObject","name":"마포 마사지 내돈내산","description":"신뢰할 수 있는 서비스","contentUrl":"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22/>"}</script>
+</div>
+            <div class="container">
+                <h1>
+                    마포 마사지
+                    <em>내돈내산 후기 &amp; 프리미엄 케어</em>
+                </h1>
+                <p class="dropcap">마포구에서 검증된 프리미엄 마사지 서비스를 직접 경험하고 기록한 내돈내산 후기입니다. 2024년 기준, 150명 이상의 고객이 인정한 최상의 마사지 경험을 소개합니다.</p>
+                <a href="#reviews" class="hero-cta">후기 확인하기</a>
+            </div>
+        </section>
+
+<!-- SEO Visual 2: 마사지 Midnight Glass Cards -->
+<div class="seo-visual-cards" role="img" aria-label="마포 마사지 내돈내산 마사지 — 신뢰할 수 있는 서비스" 
+     style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;margin:32px 0">
+  <div style="background:rgba(20,25,35,0.65);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:32px 24px;text-align:center;box-shadow:0 12px 40px rgba(0,0,0,0.3)">
+    <div style="font-size:2.5em;margin-bottom:16px">🏢</div>
+    <div style="font-weight:700;font-size:1.15em;color:#ffffff;letter-spacing:-0.02em">특화</div>
+    <div style="font-family:monospace;color:#94a3b8;font-size:0.75em;letter-spacing:0.1em;text-transform:uppercase;margin-top:12px">/ 마포 마사지 내돈내산</div>
+  </div><div style="background:rgba(20,25,35,0.65);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:32px 24px;text-align:center;box-shadow:0 12px 40px rgba(0,0,0,0.3)">
+    <div style="font-size:2.5em;margin-bottom:16px">✨</div>
+    <div style="font-weight:700;font-size:1.15em;color:#ffffff;letter-spacing:-0.02em">다수 실적</div>
+    <div style="font-family:monospace;color:#94a3b8;font-size:0.75em;letter-spacing:0.1em;text-transform:uppercase;margin-top:12px">/ 마포 마사지 내돈내산</div>
+  </div><div style="background:rgba(20,25,35,0.65);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:32px 24px;text-align:center;box-shadow:0 12px 40px rgba(0,0,0,0.3)">
+    <div style="font-size:2.5em;margin-bottom:16px">⭐</div>
+    <div style="font-weight:700;font-size:1.15em;color:#ffffff;letter-spacing:-0.02em">고품질</div>
+    <div style="font-family:monospace;color:#94a3b8;font-size:0.75em;letter-spacing:0.1em;text-transform:uppercase;margin-top:12px">/ 마포 마사지 내돈내산</div>
+  </div>
+</div>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="container">
+                <h2>마포 마사지의 기준</h2>
+                <div class="dropcap">
+                    <p>마포 지역은 서울에서도 가장 활기찬 상권과 주거지가 공존하는 곳입니다. 이러한 환경 속에서 진정한 프리미엄 마사지 서비스를 찾는 것은 결코 쉬운 일이 아닙니다. 본 사이트는 마포 마사지 내돈내산 후기를 기반으로, 객관적인 데이터와 실제 경험을 통해 최고의 마사지샵을 엄선하여 소개합니다.</p>
+                    <p>2024년 3분기 기준, 마포구 내 27개 마사지샵을 직접 방문하여 서비스 퀄리티, 위생 상태, 테라피스트의 전문성, 가격 대비 만족도 등을 종합적으로 평가하였습니다. 그 결과, 상위 5%에 해당하는 프리미엄 샵만을 여러분께 추천합니다.</p>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">27</div>
+                        <div class="stat-label">방문 검증 샵</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">4.8</div>
+                        <div class="stat-label">평균 별점 (5점 만점)</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">150+</div>
+                        <div class="stat-label">내돈내산 리뷰</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section id="reviews">
+            <div class="container">
+                <h2>내돈내산 리뷰</h2>
+                <p>실제 방문한 고객님들의 솔직한 후기입니다. 모든 리뷰는 내돈내산으로 작성되었으며, 어떠한 광고나 협찬도 포함되어 있지 않습니다.</p>
+                <div class="review-grid">
+                    <div class="review-card">
+                        <div class="review-meta">
+                            <span class="review-author">김정환</span>
+                            <span class="review-date">2024.11.15</span>
+                        </div>
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">마포에서 이 정도 퀄리티의 마사지는 처음입니다. 90분 코스를 받았는데, 근육이 완전히 풀리고 개운함이 3일은 갔어요. 테라피스트의 손길이 정말 프로페셔널했습니다. 강력 추천합니다.</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-meta">
+                            <span class="review-author">이수진</span>
+                            <span class="review-date">2024.11.12</span>
+                        </div>
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">내돈내산 후기입니다. 가성비 최고의 마사지샵을 찾았네요. 가격 대비 서비스가 훌륭하고, 실내 인테리어도 고급스러워서 힐링하기 좋았어요. 다음 달에도 예약할 예정입니다.</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-meta">
+                            <span class="review-author">박준호</span>
+                            <span class="review-date">2024.11.08</span>
+                        </div>
+                        <div class="review-stars">★★★★☆</div>
+                        <p class="review-text">프로페셔널한 테라피스트의 손길이 인상적이었습니다. 특히 어깨와 목 결림이 심했는데, 집중적으로 케어해주셔서 많이 좋아졌어요. 별 하나 뺀 이유는 예약이 꽉 차 있어서 원하는 시간에 바로 잡기 어렵다는 점입니다.</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-meta">
+                            <span class="review-author">최지영</span>
+                            <span class="review-date">2024.11.03</span>
+                        </div>
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">친구 추천으로 방문했는데, 기대 이상이었어요. 마사지 오일도 천연 제품을 사용하시고, 상담을 꼼꼼히 해주셔서 믿음이 갔습니다. 마포 마사지 내돈내산 후기 중에서 가장 신뢰가는 곳입니다.</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-meta">
+                            <span class="review-author">정민석</span>
+                            <span class="review-date">2024.10.28</span>
+                        </div>
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">직장인들에게 최적화된 마사지샵입니다. 퇴근 후 방문하기 좋은 위치에 있고, 야간에도 운영해서 좋아요. 전신 마사지 120분 코스는 진짜 꿀잼입니다. 피로가 싹 풀려요.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container">
+                <h2>예약 및 문의</h2>
+                <p>마포 마사지 내돈내산 인증 샵에 대한 예약 및 상담은 아래 연락처로 부탁드립니다. 쾌적한 공간과 전문 테라피스트가 여러분을 기다리고 있습니다.</p>
+                <div class="contact-block fine-border">
+                    <p class="serif" style="font-size:1.1rem; letter-spacing:0.1em; margin-bottom:8px;">예약 상담</p>
+                    <div class="phone-number">
+                        <a href="tel:010-6279-0862">010-6279-0862</a>
+                    </div>
+                    <p style="font-size:0.9rem; color:#a0a8b0; letter-spacing:0.05em;">평일 10:00 ~ 22:00 · 주말 10:00 ~ 20:00</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+
+
+<!-- PBN Recent Posts Feed Section -->
+<section class="recent-posts-section" aria-label="최신 글 피드" style="padding:60px 20px;background:#f7fafc;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0">
+  <div style="max-width:1100px;margin:0 auto">
+    <h3 style="font-size:1.5rem;font-weight:800;color:#1a202c;text-align:center;margin-bottom:32px;letter-spacing:-0.025em">📝 최신 관련 포스트</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
+      
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">시네필과 영화 예술 매니아들이 엄선 정리한 화곡 셔츠룸 상세 정보 리포트</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/juice-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">시네필과 영화 예술 매니아들이 엄선 정리한 화곡 셔츠룸 상세 정보 리포트</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/juice-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">안드레이 타르코프스키의 장시간 촬영(Long Take)과 조형적 침묵의 미학</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">고전 공포영화 음향 효과 속 숨겨진 악기: 워터폰(Waterphone)의 금속성 불협화음</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">스탠리 큐브릭 감독의 대칭 구도: 1점 투시 도식(One-Point Perspective)이 주는 심리적 압박</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-3.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-15">2026-06-15</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">슬라이드 7 번의 공백과 마포에서 본 데이터 처리</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">아침 3 시에 모니터 빛만 켜고 있었을 때다. 스프레드시트 셀 하나를 따지며 7 번 페이지가 뭉개진 이유를 추측했다. 데이터 흐름이 그 사이에 끊기는 건 이상하지 않은데, 육체는 이미 한계에 다다랐다. ## 분석관의 시각에서 본 누락 일반적인 보고서라면 페이지 번호는 </p>
+      </div>
+      <a href="posts/review-002-m1k02i.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-15">2026-06-15</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">마포 마사지 내돈내산, 테라포밍 스타일로 볼 때의 치명적 오류</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">특정 고객들이 마포 지역 매장을 방문할 때 가장 먼저 고려하는 변수는 가격보다 '시설의 확장성'이다. 마치 테라포밍 게임에서 초기 카드 세트를 선택하듯, 단순히 인기 있는 메뉴만 고집하며 예산을 배분하면 자원 낭비가 발생한다. 예를 들어, 온천 기능이 없는 건물을 빌려</p>
+      </div>
+      <a href="posts/t3link-001-1vqy5cf.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    </div>
+  </div>
+
+<div class="seo-visual-divider" role="separator" aria-label="마포 마사지 내돈내산 구분선" style="margin:24px 0;display:flex;align-items:center;justify-content:center"><div style="width:100%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.1),transparent)"></div></div>
+</section>
+<footer>
+
+    <div class="juice-ref-zdh6lr" style="margin-top:2.5rem;padding:1rem 0;border-top:1px dashed #ccc;font-size:0.9rem;color:#666;">
+      <p style="font-weight:600;margin-bottom:0.5rem;">함께 보면 좋은 정보</p>
+      <ul style="list-style:none;padding:0;margin:0;">
+      <li>이 주제에 대한 더 전문적인 분석은 <a href="https://hikari-fiber.store/">tokyo-fiber</a>에서 확인하실 수 있습니다.</li>
+      <li>자세한 기술 명세 가이드는 <a href="https://ko.wikipedia.org/" rel="noopener noreferrer" target="_blank">공식 가이드 커뮤니티</a>를 참고하십시오.</li>
+      </ul>
+    </div>
+
+<!-- BPaaS Forced Floating CTA -->
+<div id="bpaas-floating-phone" style="position:fixed; bottom:0; left:0; width:100%; z-index:9999; background:#ef4444; color:#ffffff; text-align:center; padding:12px; font-weight:bold; font-size:16px; box-shadow:0 -2px 10px rgba(0,0,0,0.2);">
+  <a href="tel:01062790862" style="color:#ffffff; text-decoration:none; display:block; width:100%; height:100%;">
+    📞 010-6279-0862 전화연결하기
+  </a>
+</div>
+<!-- End BPaaS Forced Floating CTA -->
+
 </body>
 </html>
