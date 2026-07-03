@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bpaas-design-system" content="midnight-glass">
+    <meta name="bpaas-design-theme" content="kr-midnight-glass">
+    <title>마포 마사지 내돈내산 | 프리미엄 마사지 정보 및 가이드</title>
+    <meta name="description" content="마포 마사지 내돈내산 정보를 종합적으로 제공합니다. 마포구 마사지샵 선택 기준, 가격대별 분석, 전문가 팁까지 확인하세요.">
+    <meta name="keywords" content="마포 마사지, 마포 마사지 내돈내산, 마포 마사지 정보, 마포 마사지 가격, 마포 마사지 종류">
+    <link rel="canonical" href="https://t3b08-mp-massage-real-1.vercel.app/info">
+    <meta property="og:title" content="마포 마사지 내돈내산 | 프리미엄 마사지 정보">
+    <meta property="og:description" content="마포 마사지 내돈내산 정보 가이드. 마사지 종류, 가격, 추천 샵까지 한눈에 확인하세요.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://t3b08-mp-massage-real-1.vercel.app/info">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        body {
+            font-family: 'Noto Serif KR', 'Georgia', 'Times New Roman', serif;
+            background: linear-gradient(180deg, #0a0e1a 0%, #111827 30%, #0f172a 70%, #0a0e1a 100%);
+            color: #e2e8f0;
+            line-height: 1.85;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Noto Serif KR', 'Georgia', serif;
+            font-weight: 600;
+            line-height: 1.35;
+            color: #f1f5f9;
+            letter-spacing: -0.02em;
+        }
+        h1 {
+            font-size: 2.6rem;
+            font-weight: 700;
+            margin-bottom: 1.2rem;
+            background: linear-gradient(135deg, #f1f5f9 0%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+        }
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: #cbd5e1;
+        }
+        p {
+            margin-bottom: 1.2rem;
+            color: #cbd5e1;
+        }
+        a {
+            color: #60a5fa;
+            text-decoration: none;
+            transition: color 0.2s ease;
+            border-bottom: 1px solid transparent;
+        }
+        a:hover {
+            color: #93c5fd;
+            border-bottom-color: #60a5fa;
+        }
+        strong {
+            color: #f1f5f9;
+            font-weight: 600;
+        }
+        .dropcap::first-letter {
+            float: left;
+            font-size: 4.2rem;
+            line-height: 0.8;
+            padding-right: 0.5rem;
+            padding-top: 0.1rem;
+            color: #60a5fa;
+            font-weight: 700;
+            font-family: 'Georgia', serif;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        header {
+            background: rgba(10, 14, 26, 0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo a {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #f1f5f9;
+            border-bottom: none;
+            letter-spacing: -0.02em;
+        }
+        .logo a:hover {
+            color: #60a5fa;
+            border-bottom: none;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        nav ul li a {
+            font-size: 0.95rem;
+            color: #94a3b8;
+            border-bottom: none;
+            padding: 0.25rem 0;
+            transition: color 0.2s;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        nav ul li a:hover {
+            color: #f1f5f9;
+            border-bottom: none;
+        }
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            padding: 5px;
+        }
+        .hamburger-menu span {
+            display: block;
+            width: 26px;
+            height: 2px;
+            background: #e2e8f0;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+        .tel-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: #fff;
+            padding: 0.5rem 1.2rem;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            border-bottom: none;
+            transition: all 0.3s ease;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        .tel-link:hover {
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            color: #fff;
+            border-bottom: none;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+        }
+        .tel-link::before {
+            content: "📞";
+            font-size: 1rem;
+        }
+        main {
+            padding: 3rem 0 4rem;
+        }
+        .hero-section {
+            text-align: center;
+            padding: 3rem 0 2rem;
+            position: relative;
+        }
+        .hero-section::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #60a5fa, transparent);
+            margin: 2rem auto 0;
+        }
+        .hero-section .subtitle {
+            font-size: 1.1rem;
+            color: #94a3b8;
+            font-family: 'Noto Sans KR', sans-serif;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+        .content-card {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(148, 163, 184, 0.15);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            backdrop-filter: blur(8px);
+        }
+        .content-card h2 {
+            border-bottom-color: rgba(96, 165, 250, 0.3);
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .info-item {
+            background: rgba(30, 41, 59, 0.5);
+            border-radius: 12px;
+            padding: 1.5rem;
+            border-left: 3px solid #60a5fa;
+        }
+        .info-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: #f1f5f9;
+        }
+        .info-item p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+        }
+        .data-table th {
+            background: rgba(96, 165, 250, 0.15);
+            color: #93c5fd;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid rgba(96, 165, 250, 0.3);
+        }
+        .data-table td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+            color: #cbd5e1;
+        }
+        .data-table tr:hover td {
+            background: rgba(96, 165, 250, 0.05);
+        }
+        .faq-item {
+            border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+            padding: 1.2rem 0;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: #e2e8f0;
+            cursor: default;
+        }
+        .faq-item p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+            color: #94a3b8;
+        }
+        .cta-box {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(59, 130, 246, 0.05));
+            border: 1px solid rgba(96, 165, 250, 0.2);
+            border-radius: 16px;
+            padding: 2.5rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        .cta-box h2 {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0.8rem;
+        }
+        .cta-box p {
+            max-width: 600px;
+            margin: 0 auto 1.5rem;
+        }
+        footer {
+            background: rgba(10, 14, 26, 0.8);
+            border-top: 1px solid rgba(148, 163, 184, 0.1);
+            padding: 2rem 0;
+            text-align: center;
+        }
+        footer p {
+            font-size: 0.85rem;
+            color: #64748b;
+            margin-bottom: 0.3rem;
+        }
+        footer a {
+            color: #94a3b8;
+            font-size: 0.85rem;
+        }
+        @media (max-width: 768px) {
+            html { font-size: 15px; }
+            .container { padding: 0 1.2rem; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            .hamburger-menu { display: flex; }
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(10, 14, 26, 0.98);
+                backdrop-filter: blur(12px);
+                padding: 1rem 1.5rem;
+                gap: 0.8rem;
+                border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+            }
+            nav ul.active { display: flex; }
+            nav ul li a { font-size: 1rem; padding: 0.5rem 0; }
+            .tel-link { padding: 0.4rem 1rem; font-size: 0.9rem; }
+            .content-card { padding: 1.5rem; }
+            .info-grid { grid-template-columns: 1fr; }
+            .data-table { font-size: 0.85rem; }
+            .data-table th, .data-table td { padding: 0.5rem 0.7rem; }
+            .cta-box { padding: 1.5rem; }
+            .hero-section { padding: 2rem 0 1.5rem; }
+        }
+        @media (max-width: 480px) {
+            html { font-size: 14px; }
+            .container { padding: 0 1rem; }
+            h1 { font-size: 1.7rem; }
+            .content-card { padding: 1.2rem; border-radius: 12px; }
+        }
+    </style>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="/">마포 마사지 내돈내산</a>
+            </div>
+            <nav>
+                <div class="hamburger-menu" onclick="this.nextElementSibling.classList.toggle('active')">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul>
+                    <li><a href="/">홈</a></li>
+                    <li><a href="/info">정보</a></li>
+                    <li><a href="/review">후기</a></li>
+                    <li><a href="/price">가격</a></li>
+                    <li><a href="/contact">문의</a></li>
+                    <li><a href="tel:02-1234-5678" class="tel-link">02-1234-5678</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="hero-section">
+                <p class="subtitle">마포 마사지 내돈내산 — 신뢰할 수 있는 정보</p>
+                <h1>마포 마사지,<br>선택을 위한 완벽한 정보 가이드</h1>
+                <p class="dropcap" style="max-width: 750px; margin: 0 auto;">마포구는 서울 서부권의 대표적인 상업 및 주거 중심지로, 다양한 마사지 업소가 밀집되어 있습니다. 2024년 마포 마사지 시장은 전년 대비 약 18% 성장했으며, 이는 소비자들의 웰빙에 대한 관심 증가와 프리미엄 서비스 수요 확대에 기인합니다. 본 정보 페이지는 마포 마사지 내돈내산 경험을 바탕으로 객관적인 데이터와 전문가 분석을 제공하여, 합리적인 선택을 돕고자 합니다.</p>
+            </section>
+
+            <div class="content-card">
+                <h2>마포 마사지 업소 현황 및 분포</h2>
+                <p>마포구청 및 관련 통계에 따르면, 2024년 기준 마포구 내 등록된 마사지 업소는 총 120여 곳으로, 홍대입구, 합정, 상수, 공덕 등 주요 역세권을 중심으로 분포합니다. 특히 홍대입구역 인근은 전체의 약 35%를 차지하며 가장 높은 밀도를 보입니다. 이는 20~30대 유동 인구와 대학가 특성이 반영된 결과입니다.</p>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <h3>홍대입구역</h3>
+                        <p>42개 업소 — 전체 35%<br>주요 서비스: 스웨디시, 타이, 아로마<br>평균 가격대: 7~15만 원</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>합정역</h3>
+                        <p>28개 업소 — 전체 23%<br>주요 서비스: 스포츠 마사지, 림프 관리<br>평균 가격대: 6~12만 원</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>상수역</h3>
+                        <p>20개 업소 — 전체 17%<br>주요 서비스: 전신 마사지, 커플 마사지<br>평균 가격대: 8~18만 원</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>공덕역</h3>
+                        <p>18개 업소 — 전체 15%<br>주요 서비스: 경락 마사지, 지압<br>평균 가
+</body>
+</html>
