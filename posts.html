@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (1/2) · t3b08-mp-massage-real-1</title>
+  <meta name="description" content="t3b08-mp-massage-real-1에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://t3b08-mp-massage-real-1.maphoshirts.com/posts.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ *, *::before, *::after {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+ html {
+ font-size: 16px;
+ scroll-behavior: smooth;
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+ }
+ body {
+ font-family: 'Noto Serif KR', 'Georgia', 'Times New Roman', serif;
+ background: linear-gradient(180deg, #0a0e1a 0%, #111827 30%, #0f172a 70%, #0a0e1a 100%);
+ color: #e2e8f0;
+ line-height: 1.85;
+ min-height: 100vh;
+ overflow-x: hidden;
+ }
+ h1, h2, h3, h4, h5, h6 {
+ font-family: 'Noto Serif KR', 'Georgia', serif;
+ font-weight: 600;
+ line-height: 1.35;
+ color: #f1f5f9;
+ letter-spacing: -0.02em;
+ }
+ h1 {
+ font-size: 2.6rem;
+ font-weight: 700;
+ margin-bottom: 1.2rem;
+ background: linear-gradient(135deg, #f1f5f9 0%, #94a3b8 100%);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ background-clip: text;
+ }
+ h2 {
+ font-size: 2rem;
+ margin-bottom: 1rem;
+ padding-bottom: 0.5rem;
+ border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+ }
+ h3 {
+ font-size: 1.5rem;
+ margin-bottom: 0.75rem;
+ color: #cbd5e1;
+ }
+ p {
+ margin-bottom: 1.2rem;
+ color: #cbd5e1;
+ }
+ a {
+ color: #60a5fa;
+ text-decoration: none;
+ transition: color 0.2s ease;
+ border-bottom: 1px solid transparent;
+ }
+ a:hover {
+ color: #93c5fd;
+ border-bottom-color: #60a5fa;
+ }
+ strong {
+ color: #f1f5f9;
+ font-weight: 600;
+ }
+ .dropcap::first-letter {
+ float: left;
+ font-size: 4.2rem;
+ line-height: 0.8;
+ padding-right: 0.5rem;
+ padding-top: 0.1rem;
+ color: #60a5fa;
+ font-weight: 700;
+ font-family: 'Georgia', serif;
+ }
+ .container {
+ max-width: 1100px;
+ margin: 0 auto;
+ padding: 0 1.5rem;
+ }
+ header {
+ background: rgba(10, 14, 26, 0.95);
+ backdrop-filter: blur(12px);
+ -webkit-backdrop-filter: blur(12px);
+ border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+ position: sticky;
+ top: 0;
+ z-index: 1000;
+ padding: 1rem 0;
+ }
+ header .container {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ }
+ .logo a {
+ font-size: 1.4rem;
+ font-weight: 700;
+ color: #f1f5f9;
+ border-bottom: none;
+ letter-spacing: -0.02em;
+ }
+ .logo a:hover {
+ color: #60a5fa;
+ border-bottom: none;
+ }
+ nav ul {
+ display: flex;
+ list-style: none;
+ gap: 2rem;
+ }
+ nav ul li a {
+ font-size: 0.95rem;
+ color: #94a3b8;
+ border-bottom: none;
+ padding: 0.25rem 0;
+ transition: color 0.2s;
+ font-family: 'Noto Sans KR', sans-serif;
+ }
+ nav ul li a:hover {
+ color: #f1f5f9;
+ border-bottom: none;
+ }
+ .hamburger-menu {
+ display: none;
+ flex-direction: column;
+ cursor: pointer;
+ gap: 5px;
+ padding: 5px;
+ }
+ .hamburger-menu span {
+ display: block;
+ width: 26px;
+ height: 2px;
+ background: #e2e8f0;
+ border-radius: 2px;
+ transition: all 0.3s ease;
+ }
+ .tel-link {
+ display: inline-flex;
+ align-items: center;
+ gap: 0.4rem;
+ background: linear-gradient(135deg, #2563eb, #1d4ed8);
+ color: #fff;
+ padding: 0.5rem 1.2rem;
+ border-radius: 8px;
+ font-size: 0.95rem;
+ font-weight: 500;
+ border-bottom: none;
+ transition: all 0.3s ease;
+ font-family: 'Noto Sans KR', sans-serif;
+ }
+ .tel-link:hover {
+ background: linear-gradient(135deg, #3b82f6, #2563eb);
+ color: #fff;
+ border-bottom: none;
+ transform: translateY(-1px);
+ box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+ }
+ .tel-link::before {
+ content: "📞";
+ font-size: 1rem;
+ }
+ main {
+ padding: 3rem 0 4rem;
+ }
+ .hero-section {
+ text-align: center;
+ padding: 3rem 0 2rem;
+ position: relative;
+ }
+ .hero-section::after {
+ content: '';
+ display: block;
+ width: 60px;
+ height: 2px;
+ background: linear-gradient(90deg, transparent, #60a5fa, transparent);
+ margin: 2rem auto 0;
+ }
+ .hero-section .subtitle {
+ font-size: 1.1rem;
+ color: #94a3b8;
+ font-family: 'Noto Sans KR', sans-serif;
+ letter-spacing: 0.05em;
+ margin-bottom: 0.5rem;
+ }
+ .content-card {
+ background: rgba(15, 23, 42, 0.6);
+ border: 1px solid rgba(148, 163, 184, 0.15);
+ border-radius: 16px;
+ padding: 2.5rem;
+ margin-bottom: 2.5rem;
+ backdrop-filter: blur(8px);
+ }
+ .content-card h2 {
+ border-bottom-color: rgba(96, 165, 250, 0.3);
+ }
+ .info-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+ gap: 1.5rem;
+ margin: 2rem 0;
+ }
+ .info-item {
+ background: rgba(30, 41, 59, 0.5);
+ border-radius: 12px;
+ padding: 1.5rem;
+ border-left: 3px solid #60a5fa;
+ }
+ .info-item h3 {
+ font-size: 1.1rem;
+ margin-bottom: 0.5rem;
+ color: #f1f5f9;
+ }
+ .info-item p {
+ font-size: 0.95rem;
+ margin-bottom: 0;
+ }
+ .data-table {
+ width: 100%;
+ border-collapse: collapse;
+ margin: 1.5rem 0;
+ font-size: 0.95rem;
+ }
+ .data-table th {
+ background: rgba(96, 165, 250, 0.15);
+ color: #93c5fd;
+ padding: 0.75rem 1rem;
+ text-align: left;
+ font-weight: 600;
+ border-bottom: 2px solid rgba(96, 165, 250, 0.3);
+ }
+ .data-table td {
+ padding: 0.75rem 1rem;
+ border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+ color: #cbd5e1;
+ }
+ .data-table tr:hover td {
+ background: rgba(96, 165, 250, 0.05);
+ }
+ .faq-item {
+ border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+ padding: 1.2rem 0;
+ }
+ .faq-item:last-child {
+ border-bottom: none;
+ }
+ .faq-item h3 {
+ font-size: 1.1rem;
+ margin-bottom: 0.5rem;
+ color: #e2e8f0;
+ cursor: default;
+ }
+ .faq-item p {
+ font-size: 0.95rem;
+ margin-bottom: 0;
+ color: #94a3b8;
+ }
+ .cta-box {
+ background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(59, 130, 246, 0.05));
+ border: 1px solid rgba(96, 165, 250, 0.2);
+ border-radius: 16px;
+ padding: 2.5rem;
+ text-align: center;
+ margin: 2rem 0;
+ }
+ .cta-box h2 {
+ border-bottom: none;
+ padding-bottom: 0;
+ margin-bottom: 0.8rem;
+ }
+ .cta-box p {
+ max-width: 600px;
+ margin: 0 auto 1.5rem;
+ }
+ footer {
+ background: rgba(10, 14, 26, 0.8);
+ border-top: 1px solid rgba(148, 163, 184, 0.1);
+ padding: 2rem 0;
+ text-align: center;
+ }
+ footer p {
+ font-size: 0.85rem;
+ color: #64748b;
+ margin-bottom: 0.3rem;
+ }
+ footer a {
+ color: #94a3b8;
+ font-size: 0.85rem;
+ }
+ @media (max-width: 768px) {
+ html { font-size: 15px; }
+ .container { padding: 0 1.2rem; }
+ h1 { font-size: 2rem; }
+ h2 { font-size: 1.6rem; }
+ .hamburger-menu { display: flex; }
+ nav ul {
+ display: none;
+ flex-direction: column;
+ position: absolute;
+ top: 100%;
+ left: 0;
+ right: 0;
+ background: rgba(10, 14, 26, 0.98);
+ backdrop-filter: blur(12px);
+ padding: 1rem 1.5rem;
+ gap: 0.8rem;
+ border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+ }
+ nav ul.active { display: flex; }
+ nav ul li a { font-size: 1rem; padding: 0.5rem 0; }
+ .tel-link { padding: 0.4rem 1rem; font-size: 0.9rem; }
+ .content-card { padding: 1.5rem; }
+ .info-grid { grid-template-columns: 1fr; }
+ .data-table { font-size: 0.85rem; }
+ .data-table th, .data-table td { padding: 0.5rem 0.7rem; }
+ .cta-box { padding: 1.5rem; }
+ .hero-section { padding: 2rem 0 1.5rem; }
+ }
+ @media (max-width: 480px) {
+ html { font-size: 14px; }
+ .container { padding: 0 1rem; }
+ h1 { font-size: 1.7rem; }
+ .content-card { padding: 1.2rem; border-radius: 12px; }
+ }
+ </style>
+  <meta property="og:title" content="글 목록 (1/2) · t3b08-mp-massage-real-1">
+  <meta property="og:description" content="t3b08-mp-massage-real-1에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://t3b08-mp-massage-real-1.maphoshirts.com/posts.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+ <div class="container">
+ <div class="logo">
+ <a href="/">마포 마사지 내돈내산</a>
+ </div>
+ <nav>
+ <div class="hamburger-menu" onclick="this.nextElementSibling.classList.toggle('active')">
+ 
+ 
+ 
+ </div>
+ <ul>
+ <li><a href="/">홈</a></li>
+ <li><a href="/info">정보</a></li>
+ <li><a href="/review">후기</a></li>
+ <li><a href="/price">가격</a></li>
+ <li><a href="/contact">문의</a></li>
+ 
+ </ul>
+ </nav>
+ </div>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 40개 · 1/2 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-024.html">마포에서 나만을 위한 마사지 샵을 찾는 방법과 쾌적한 이용 팁</a>
+        <p class="post-item__summary">마포 일대에는 직장인들의 피로를 풀어줄 수 있는 다양한 마사지 공간이 자리하고 있습니다. 퇴근길이나 주말 오후 시간을 활용해 몸의 긴장을 완화하고자 할 때, 어떤 기준을 가지고 매장을 선택해야 할지</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-599.html">마포 마사지 내돈내산 확인 시 입금 계좌 성명과 사업장 등록명 불일치 문제</a>
+        <p class="post-item__summary">마포 마사지 내돈내산 확인 과정에서 가장 간과되는 지점이 있다. 바로 입금 계좌의 예금주 성명과 해당 매장의 공식 사업자 등록명이 일치하는지의 여부다. 대부분의 소비자는 가격이나 시술 종류, 위치 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-6549.html">마포 마사지 내돈내산으로 살펴본 지역별 선택 포인트</a>
+        <p class="post-item__summary">마포 지역은 홍대입구, 합정, 신촌 등 유동 인구가 많은 상권이 발달하여 마사지 업소도 다양하게 분포하고 있다. 건마 중심의 업소부터 아로마, 스포츠 마사지까지 취향에 따라 고를 수 있는 폭이 넓다</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-6550.html">마포 마사지 내돈내산, 건강을 담은 휴식의 장소</a>
+        <p class="post-item__summary">마포 마사지 내돈내산이 서울에서 늘 찾는 즐거움이자 힐링의 장소입니다. 도시의 파란 하늘 아래, 이곳은 편안한 안식처를 제공하며 전문 마사지사가 손으로 직접 쿨한 터치를 선사합니다. 아늑한 분위기와</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-6551.html">마포 마사지 내돈내산 솔직 후기 – 피로 회복부터 힐링까지</a>
+        <p class="post-item__summary">업무 스트레스가 쌓일 때면 몸이 무겁고 목부터 어깨까지 뻐근해지기 마련이다. 그래서 마포 일대에서 마사지 spot을 찾아보게 되었는데, 홍대입구역과 합정역 인근에 생각보다 다양한 마사지샵이 자리 잡</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-6552.html">마포 마사지 내돈내산, 바쁜 일상에 활력 충전하기</a>
+        <p class="post-item__summary">마포 마사지 내돈내산은 바쁜 현대인에게 소소한 힐링을 제공합니다. 전문 마사지사가 다양한 체력 회복 기법을 활용해 일상의 피로를 풀어줍니다. 사각한 공간과 조용한 분위기 덕분에 집중해서 몸과 마음을</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-6553.html">마포에서 진짜 내돈내산 마사지 고르는 법</a>
+        <p class="post-item__summary">마포 지역은 홍대, 합정, 공덕 등 다양한 상권을 중심으로 마사지 업소가 밀집한 곳이다. 바쁜 일상에 지친 사람들이 피로 회복과 건강 관리를 위해 마사지를 찾는 발길이 꾸준히 이어지고 있다. 최근에</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-6554.html">마포 마사지 내돈내산, 투명 가격이 언제 보장될까?</a>
+        <p class="post-item__summary">마포의 소규모 마사지를 찾는 이들이 늘어나면서 내돈내산이라는 표현이 널리 퍼졌다. 하지만 실제 비용은 사전에 알 수 없어서 고민이 많다. 이 글에서는 투명한 가격 정보를 얻는 방법을 살펴본다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-6555.html">마포 마사지 내돈내산 식으로 업소 고르는 기준과 팁</a>
+        <p class="post-item__summary">마포구에 위치한 마사지 업소는 종류와 가격대가 정말 다양하다. 건마, 스웨디시, 아로마, 타이 등 코스도 제각각이라 처음 방문하는 사람이라면 어떤 기준으로 골라야 할지 막막할 수 있다. 단순한 가격</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-6556.html">마포 마사지 내돈내산, 소셜 마케팅으로 고객을 끌어들이는 비결</a>
+        <p class="post-item__summary">마포에서 찾는 완벽한 휴식, 마포 마사지 내돈내산은 가격 대비 풍부한 서비스와 편안한 분위기를 자랑합니다. 고객들이 실질적인 재정적 부담 없이 고급 스파 경험을 할 수 있도록 손익 구조를 단순화했습</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-6557.html">마포 마사지 내돈내산 기록</a>
+        <p class="post-item__summary">마포 지역에서 마사지를 받을 곳을 찾는 분들이 많다. 하지만 실제로 방문한 사람의 솔직한 후기는 생각보다 찾기 어렵다. 최근 몇 군데를 직접 방문해본 결과 시설과 관리사의 실력 모두 만족스러운 곳을</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-6558.html">마포 마사지 내돈내산, 가성비 최고의 선택</a>
+        <p class="post-item__summary">마포구에 위치한 내돈내산 마사지는 비교적 저렴한 가격에 전문적인 서비스를 제공한다. 복합적인 스트레스 해소와 동시에 몸의 정화 효과가 조화롭게 이루어진다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-6559.html">마포 마사지 내돈내산 솔직 후기와 분위기 선택 팁</a>
+        <p class="post-item__summary">오랜만에 마포에서 마사지를 받아봤다. 업무 피로가 쌓여서 내돈내산으로 예약하고 방문한 곳인데, 여러 후기를 꼼꼼히 읽어보고 결정한 터라 살짝 기대도 됐다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-6560.html">마포 마사지 내돈내산으로 비용을 절약하며 편안함을 누리다</a>
+        <p class="post-item__summary">마포는 서울의 동부에 위치해 있어 지하철이나 버스로 접근하기가 편리합니다. 마사지업소가 많이 모여 있어 가격 차이를 비교하기가 수월합니다. 현금 결제나 포인트 적립으로 비용을 조금 더 절감할 수 있</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-6561.html">마포 마사지 내돈내산 선택 기준</a>
+        <p class="post-item__summary">마포에는 다양한 마사지 업소가 밀집해 있어 선택이 쉽지 않다. 위치와 가격만으로 결정했다가 만족도가 떨어지는 경우도 많다. 실제로 꾸준히 관리받는 곳을 찾으려면 여러 조건을 꼼꼼히 비교할 필요가 있</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-6562.html">마포 마사지 내돈내산, 새로운 휴식 문화를 선도하다</a>
+        <p class="post-item__summary">마포 마사지 내돈내산은 새로운 시대의 휴식 문화를 나타낸다. 돋보이는 마사지 체계와 합리적인 가격 덕분에 매일의 바쁜 일과를 한층 더 리플렉스하게 만들어 준다. 생활 속에서 스트레스가 쌓이면, 실제</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-6563.html">마포 마사지 내돈내산 솔직 후기와 주변 추천 정보</a>
+        <p class="post-item__summary">마포에서 마사지를 받아본 사람들은 알겠지만, 코워킹이나 장시간 앉아서 일하는 직장인들에게 마사지 만한 힐링이 없다. 특히 목과 어깨 결림이 일상이 된 요즘, 마사지 한 번이 주는 피로 회복 효과는 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-6564.html">마포 마사지 내돈내산: 지갑을 살찌우는 힐링 루트</a>
+        <p class="post-item__summary">마포 지역을 둘러보며 찾는 마사지샵은 이제 단순히 몸을 리프레시하는 곳이 아니라 실속을 챙길 수 있는 금덩어리와도 같아졌습니다. 이번엔 특히 ‘마포 마사지 내돈내산’ 명판이 유난히 눈에 띄었죠. 합</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0225.html">마포 마사지 내돈내산 경험과 구글 알고리즘 고신용 도메인 보증 카드 발급 절차</a>
+        <p class="post-item__summary">피로를 풀기 위해 방문했던 마포 마사지 내돈내산 이용 사례처럼 디지털 환경에서도 신뢰할 수 있는 기반이 필요합니다. 웹사이트 운영자들은 안정적인 검색 엔진 최적화를 위해 다양한 도구를 활용하고 있습</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0226.html">마포 마사지 내돈내산 후기 속 마포 홍대 단체 가라오케 예약 가이드</a>
+        <p class="post-item__summary">많은 이들이 마포 마사지 내돈내산 정보를 찾으며 동시에 모임 장소를 고민합니다. 흔히 대규모 가라오케 시설은 무조건 밤늦게 가야 한다고 생각하지만, 이는 잘못된 오해입니다. 사실 이른 저녁 시간을 </p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <span class="pager__current">1</span>
+      <a class="pager__link" href="posts-2.html">2</a>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
